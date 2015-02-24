@@ -1,0 +1,81 @@
+#header-search{
+    float: right;
+    margin-top: 3px;
+}
+#header-master{
+  background-color: #f5f5f5;
+}
+
+#logo img{
+  max-height: 124px;
+}
+.module-logo, .module-logo .mw-ui-col-container{
+  height: 70px;
+  vertical-align: middle;
+}
+.module-logo *, .module-logo .mw-ui-col{
+  vertical-align: middle;
+}
+
+.mw-social-links a span{
+    font-size: 22px;
+}
+
+.mw-social-links a{
+  width: 36px;
+  height: 36px;
+  float: left;
+  margin-right: 0;
+  background-color:#efecec;
+  color: #707070;
+  position: relative;
+  border-radius: 0;
+}
+
+#social-links-header{
+  float: right;
+  margin-top: 17px;
+  margin-left: 17px;
+}
+
+.mw-social-links a:before{
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  content: "";
+
+  -webkit-transition: all 0.22s;
+  -moz-transition: all 0.22s;
+  -ms-transition: all 0.22s;
+  -o-transition: all 0.22s;
+  transition: all 0.22s;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -o-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  opacity: 0;
+}
+
+.mw-social-links a:hover .mw-icon-facebook{ color: #48649f; }
+.mw-social-links a:hover .mw-icon-twitter{ color: #55acee; }
+.mw-social-links a:hover .mw-icon-social-pinterest{ color: #d01d15; }
+.mw-social-links a:hover .mw-icon-social-youtube{ color:  #dc2725; }
+.mw-social-links a:hover .mw-icon-googleplus{ color:   #df4a32; }
+
+.mw-social-links a:hover:before{
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+.mw-social-links a span{
+  z-index: 1;
+}
