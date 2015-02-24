@@ -78,13 +78,13 @@
   <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300italic&subset=latin,cyrillic,greek,latin-ext' rel='stylesheet' type='text/css'>
   <script>
 
-       mw.require("<?php print TEMPLATE_URL;  ?>template_settings.css");
+       mw.require("<?php print templates_url();  ?>template_settings.css");
 
       _body = window.parent.document.body;
 
       setScheme = function(scheme){
         var csslink = window.parent.document.getElementById('colorscss');
-        var url = mw.settings.template_url + 'css/colors/' + scheme + '.css?v='+mw.random();
+        var url = mw.settings.templates_url() + 'css/colors/' + scheme + '.css?v='+mw.random();
         csslink.href = url;
       }
       cleanFont = function(){
@@ -360,7 +360,7 @@
   </script>
   <script>
     mw.require("files.js");
-    mw.require("<?php print INCLUDES_URL; ?>css/wysiwyg.css");
+    mw.require("<?php print mw_includes_url(); ?>css/wysiwyg.css");
   </script>
 
 
@@ -434,10 +434,10 @@
 
 <div class="body-bgs-holder">
   <a href="javascript:;" class="pick-image scheme-transparent" data-value='bgimage0'></a>
-  <a href="javascript:;" class="pick-image" style="background-image: url(<?php print TEMPLATE_URL;  ?>img/bgimage1.png)" data-value='bgimage1'></a>
-  <a href="javascript:;" class="pick-image" style="background-image: url(<?php print TEMPLATE_URL;  ?>img/bgimage2.jpg)" data-value='bgimage2'></a>
-  <a href="javascript:;" class="pick-image" style="background-image: url(<?php print TEMPLATE_URL;  ?>img/bgimage3.jpg)" data-value='bgimage3'></a>
-  <a href="javascript:;" class="pick-image" style="background-image: url(<?php print TEMPLATE_URL;  ?>img/bgimage4.jpg)" data-value='bgimage4'></a>
+  <a href="javascript:;" class="pick-image" style="background-image: url(<?php print templates_url();  ?>img/bgimage1.png)" data-value='bgimage1'></a>
+  <a href="javascript:;" class="pick-image" style="background-image: url(<?php print templates_url();  ?>img/bgimage2.jpg)" data-value='bgimage2'></a>
+  <a href="javascript:;" class="pick-image" style="background-image: url(<?php print templates_url();  ?>img/bgimage3.jpg)" data-value='bgimage3'></a>
+  <a href="javascript:;" class="pick-image" style="background-image: url(<?php print templates_url();  ?>img/bgimage4.jpg)" data-value='bgimage4'></a>
   <a href="javascript:;"
      class="pick-image pick-image-custom<?php if($bgimage=='bgimagecustom'){ print ' active'; } ?>"
      id="pick-image-custom-body"
