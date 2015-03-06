@@ -1,4 +1,4 @@
-<div id="settings-holder">
+<div id="settings-holder" style="padding: 20px;">
 
 
   <?php
@@ -78,13 +78,13 @@
   <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300italic&subset=latin,cyrillic,greek,latin-ext' rel='stylesheet' type='text/css'>
   <script>
 
-       mw.require("<?php print templates_url();  ?>template_settings.css");
+       mw.require("<?php print template_url();  ?>template_settings.css");
 
       _body = window.parent.document.body;
 
       setScheme = function(scheme){
         var csslink = window.parent.document.getElementById('colorscss');
-        var url = mw.settings.templates_url() + 'css/colors/' + scheme + '.css?v='+mw.random();
+        var url = '<?php print template_url();  ?>css/colors/' + scheme + '.css?v='+mw.random();
         csslink.href = url;
       }
       cleanFont = function(){
@@ -364,12 +364,12 @@
   </script>
 
 
-  <h1>TEMPLATE SETTINGS</h1>
+  <h1 style="font-size:21px;">TEMPLATE SETTINGS</h1>
   <hr>
 
   <label class="template-setting-label">Font</label>
-  <div title="Template Font" id="font_family" class="mw-dropdown mw-dropdown_type_navigation body-class"> <span class="mw-dropdown-value">
-    <span class="mw-dropdown-val" style="width: 150px;">Select</span> </span>
+  <div title="Template Font" id="font_family" class="mw-dropdown mw-dropdown-default body-class w100"> <span class="mw-dropdown-value">
+    <span class="mw-dropdown-value mw-ui-btn mw-dropdown-val w100" style="text-align: left">Select</span> </span>
     <div class="mw-dropdown-content" style="left: 0px;">
       <ul>
         <li value="font-arial" ><a style="font-family: Arial" href="#">Arial</a></li>
@@ -434,10 +434,10 @@
 
 <div class="body-bgs-holder">
   <a href="javascript:;" class="pick-image scheme-transparent" data-value='bgimage0'></a>
-  <a href="javascript:;" class="pick-image" style="background-image: url(<?php print templates_url();  ?>img/bgimage1.png)" data-value='bgimage1'></a>
-  <a href="javascript:;" class="pick-image" style="background-image: url(<?php print templates_url();  ?>img/bgimage2.jpg)" data-value='bgimage2'></a>
-  <a href="javascript:;" class="pick-image" style="background-image: url(<?php print templates_url();  ?>img/bgimage3.jpg)" data-value='bgimage3'></a>
-  <a href="javascript:;" class="pick-image" style="background-image: url(<?php print templates_url();  ?>img/bgimage4.jpg)" data-value='bgimage4'></a>
+  <a href="javascript:;" class="pick-image" style="background-image: url(<?php print template_url();  ?>img/bgimage1.png)" data-value='bgimage1'></a>
+  <a href="javascript:;" class="pick-image" style="background-image: url(<?php print template_url();  ?>img/bgimage2.jpg)" data-value='bgimage2'></a>
+  <a href="javascript:;" class="pick-image" style="background-image: url(<?php print template_url();  ?>img/bgimage3.jpg)" data-value='bgimage3'></a>
+  <a href="javascript:;" class="pick-image" style="background-image: url(<?php print template_url();  ?>img/bgimage4.jpg)" data-value='bgimage4'></a>
   <a href="javascript:;"
      class="pick-image pick-image-custom<?php if($bgimage=='bgimagecustom'){ print ' active'; } ?>"
      id="pick-image-custom-body"

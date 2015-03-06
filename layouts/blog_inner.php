@@ -1,7 +1,7 @@
 <?php include TEMPLATE_DIR. "header.php"; ?>
 
 
-    <div id="blog-content-<?php print CONTENT_ID; ?>">
+    <div id="blog-content-<?php print CONTENT_ID; ?>" data-mw="main">
 
           <h2 class="main-title edit" field="title" rel="content">Page Title</h2>
           <div class="edit post-content" field="content" rel="content">
